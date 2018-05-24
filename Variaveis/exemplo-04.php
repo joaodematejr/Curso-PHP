@@ -19,6 +19,7 @@ $nascimento = new DateTime();
 
 //--------------//-------------//
 
+
 //Tipos especiais
 
 $arquivo = fopen("exemplo-01.php", "r");

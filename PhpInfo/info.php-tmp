@@ -1,0 +1,38 @@
+
+Warning: PHP Startup: Unable to load dynamic library 'php_pdo.dll' (tried: D:\xampp\php\ext\php_pdo.dll (Não foi possível encontrar o módulo especificado.), D:\xampp\php\ext\php_php_pdo.dll.dll (Não foi possível encontrar o módulo especificado.)) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'php_sqlsrv_72_ts.dll' (tried: D:\xampp\php\ext\php_sqlsrv_72_ts.dll (Não foi possível encontrar o módulo especificado.), D:\xampp\php\ext\php_php_sqlsrv_72_ts.dll.dll (Não foi possível encontrar o módulo especificado.)) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'php_pdo_sqlsrv_71_nts_x64.dll' (tried: D:\xampp\php\ext\php_pdo_sqlsrv_71_nts_x64.dll (%1 não é um aplicativo Win32 válido.), D:\xampp\php\ext\php_php_pdo_sqlsrv_71_nts_x64.dll.dll (Não foi possível encontrar o módulo especificado.)) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'php_pdo_sqlsrv_71_nts_x86.dll' (tried: D:\xampp\php\ext\php_pdo_sqlsrv_71_nts_x86.dll (Não foi possível encontrar o módulo especificado.), D:\xampp\php\ext\php_php_pdo_sqlsrv_71_nts_x86.dll.dll (Não foi possível encontrar o módulo especificado.)) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'php_pdo_sqlsrv_71_ts_x64.dll' (tried: D:\xampp\php\ext\php_pdo_sqlsrv_71_ts_x64.dll (%1 não é um aplicativo Win32 válido.), D:\xampp\php\ext\php_php_pdo_sqlsrv_71_ts_x64.dll.dll (Não foi possível encontrar o módulo especificado.)) in Unknown on line 0
+
+Warning: PHP Startup: pdo_sqlsrv: Unable to initialize module
+Module compiled with module API=20160303
+PHP    compiled with module API=20170718
+These options need to match
+ in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'php_sqlsrv_71_nts_x64.dll' (tried: D:\xampp\php\ext\php_sqlsrv_71_nts_x64.dll (%1 não é um aplicativo Win32 válido.), D:\xampp\php\ext\php_php_sqlsrv_71_nts_x64.dll.dll (Não foi possível encontrar o módulo especificado.)) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'php_sqlsrv_71_nts_x86.dll' (tried: D:\xampp\php\ext\php_sqlsrv_71_nts_x86.dll (Não foi possível encontrar o módulo especificado.), D:\xampp\php\ext\php_php_sqlsrv_71_nts_x86.dll.dll (Não foi possível encontrar o módulo especificado.)) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'php_sqlsrv_71_ts_x64.dll' (tried: D:\xampp\php\ext\php_sqlsrv_71_ts_x64.dll (%1 não é um aplicativo Win32 válido.), D:\xampp\php\ext\php_php_sqlsrv_71_ts_x64.dll.dll (Não foi possível encontrar o módulo especificado.)) in Unknown on line 0
+
+Warning: PHP Startup: sqlsrv: Unable to initialize module
+Module compiled with module API=20160303
+PHP    compiled with module API=20170718
+These options need to match
+ in Unknown on line 0
+<?php
+
+// Show all information, defaults to INFO_ALL
+phpinfo();
+
+// Show just the module information.
+// phpinfo(8) yields identical results.
+phpinfo(INFO_MODULES);
+
+?>

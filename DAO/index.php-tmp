@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-require_once("config.php");
+require_once ("config.php");
 
 //CaRREGA UM USUARIO
 //$root = new Usuario();
@@ -24,7 +24,6 @@ require_once("config.php");
 //$aluno = new Usuario("aluno", "@lun0");
 //$aluno->insert();
 //echo $aluno;
-
 
 //ATUALIZANDO USUARIO NO BANCO
 //$usuario = new Usuario();

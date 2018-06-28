@@ -2,6 +2,6 @@
 
 $frutas = array('Laranja', 'Abacaxi', 'Melancia');
 
-print_r($frutas);
-
+ print_r($frutas);
+ 
 ?>

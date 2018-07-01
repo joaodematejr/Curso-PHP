@@ -1,0 +1,15 @@
+{
+    "name": "joaodematejr/composer",
+    "description": "Aula de PHP 7 usando Composer",
+    "type": "projetc",
+    "authors": [
+        {
+            "name": "João Dematé",
+            "email": "joaodematejr@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
+}

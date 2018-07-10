@@ -24,7 +24,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
         apply the skin class to the body tag so the changes take effect.
   -->
   <link rel="stylesheet" href="/Curso-PHP/Ecommerce/res/admin/dist/css/skins/skin-blue.min.css">
-
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -32,26 +31,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<!--
-BODY TAG OPTIONS:
-=================
-Apply one or more of the following classes to get the
-desired effect
-|---------------------------------------------------------|
-| SKINS         | skin-blue                               |
-|               | skin-black                              |
-|               | skin-purple                             |
-|               | skin-yellow                             |
-|               | skin-red                                |
-|               | skin-green                              |
-|---------------------------------------------------------|
-|LAYOUT OPTIONS | fixed                                   |
-|               | layout-boxed                            |
-|               | layout-top-nav                          |
-|               | sidebar-collapse                        |
-|               | sidebar-mini                            |
-|---------------------------------------------------------|
--->
 
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
@@ -194,7 +173,6 @@ desired effect
                 <!-- The user image in the menu -->
                 <li class="user-header">
                   <img src="/Curso-PHP/Ecommerce/res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
                   <p>
                     Alexander Pierce - Web Developer
                     <small>Member since Nov. 2012</small>
@@ -221,7 +199,7 @@ desired effect
                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <a href="/Curso-PHP/Ecommerce/index.php/admin/logout" class="btn btn-default btn-flat">Sign out</a>
                   </div>
                 </li>
               </ul>
@@ -267,7 +245,6 @@ desired effect
           </div>
         </form>
         <!-- /.search form -->
-
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
           <li class="header">HEADER</li>

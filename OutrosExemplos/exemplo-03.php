@@ -1,23 +1,17 @@
 <?php
-//Valor da Multa
-$multaPorAtraso = 90;
+//Data atual
+$dt = new Datetime();
+//Quantidade de Dias Atrasados
+$quantidadesDeDiasAtrsados = new DateInterval("P23D");
+//Data atual
+echo "Data Atual ";
+echo $dt->format("d/m/y H:i:s");
+//Recupera o valor da quantidade e soma coma data
+$dt->add($quantidadesDeDiasAtrsados);
 
-$td = strtotime("2018-07-01");
+echo "<br>";
+// Exibi na tela
+echo "Data que foi Entregue ";
+echo $dt->format("d/m/y H:i:s");
+echo "<br>";
 
-echo "<br><br>";
-
-if (date("d/m/Y") > date("d/m/Y", $td)) {
-    echo "Atrasado";
-    echo "<br>";
-    $diasAtrasados = date("d") - date("d", $td);
-    echo "Quantidades de dias atrasados " . $diasAtrasados;
-    echo "<br>";
-    echo "Multa por dias de atrasado " . $multaPorAtraso . " Reais";
-    $totalDoAtraso = $multaPorAtraso * $diasAtrasados;
-    echo "<br>";
-    echo "Seu carro atrasou " . $diasAtrasados . " dias o valor a ser cobrado pela multa de atraso é " . $totalDoAtraso . " Reais";
-} else if (date("d/m/Y") == date("d/m/Y", $td)) {
-    echo "Vence hoje";
-} else {
-    echo "Em dia";
-}

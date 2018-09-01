@@ -115,5 +115,55 @@ $app->post("/admin/users/:iduser", function ($iduser) {
     exit;
 
 });
+//RECUPERAR SENHA
+$app->get("/admin/forgot", function () {
+    $page = new PageAdmin([
+        "header" => false,
+        "footer" => false,
+    ]);
 
+    $page->setTpl("forgot");
+});
+//MOSTRAR PAGINA COM MENSAGEM DE EMAIL ENVIADO COM SUCESSO
+$app->post("/admin/forgot", function () {
+    $user = User::getForgot($_POST["email"]);
+    header("Location: http://localhost/Curso-PHP/Ecommerce/index.php/admin/forgot/sent");
+    exit;
+});
+//MOSTRAR PAGINA COM MENSAGEM DE EMAIL ENVIADO COM SUCESSO
+$app->get("/admin/forgot/sent", function () {
+    $page = new PageAdmin([
+        "header" => false,
+        "footer" => false,
+    ]);
+    $page->setTpl("forgot-sent");
+});
+//PAGINA COM O INPUT PARA TROCAR A SENHA
+$app->get("/admin/forgot/reset", function () {
+    $user = User::validForgotDecrypt($_GET["code"]);
+    $page = new PageAdmin([
+        "header" => false,
+        "footer" => false,
+    ]);
+    $page->setTpl("forgot-reset", array(
+        "name" => $user["desperson"],
+        "code" => $_GET["code"],
+    ));
+});
+$app->post("/admin/forgot/reset", function () {
+    $forgot = User::validForgotDecrypt($_POST["code"]);
+    User::setForgotUsed($forgot["idrecovery"]);
+    $user = new User();
+    $user->get((int) $forgot["iduser"]);
+    $password = password_hash($_POST["password"], PASSWORD_DEFAULT, [
+        "cost" => 12,
+    ]);
+    $user->setPassword($password);
+
+    $page = new PageAdmin([
+        "header" => false,
+        "footer" => false,
+    ]);
+    $page->setTpl("forgot-reset-success");
+});
 $app->run();
